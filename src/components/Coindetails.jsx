@@ -35,7 +35,7 @@ const CoinDetails = () => {
         const response = await axios.get(url);
         console.log(response.data);
         setCoinDetails(response.data);
-        // setDesc(coinDetails.description.en.substring(0,coinDetails.description.en.indexOf(".")));
+        setDesc(coinDetails.description.en.substring(0,coinDetails.description.en.indexOf(".")));
         setChangePercent(coinDetails?.market_data.price_change_percentage_24h);
         setDesc(coinDetails?.description.en.substring(0,coinDetails?.description.en.indexOf(".")));
         setLoading(false);

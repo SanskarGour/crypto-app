@@ -1,35 +1,28 @@
 import Exchange from "./Exchange";
-import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Loader from "./Loader";
+import { AppContext } from "../context/AppContext";
 
 const Exchanges = () => {
-  const url = "https://api.coingecko.com/api/v3/exchanges";
-  const [exchanges, setExchanges] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const {fetchExchanges , loading , exchanges} = useContext(AppContext);
 
   useEffect(() => {
-    const fetchData = async () => {
-      setLoading(true);
-      try {
-        const response = await axios.get(url);
-        setExchanges(response.data);
-        console.log(exchanges);
-        setLoading(false);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-        setLoading(false);
-      }
-    };
-    fetchData();
+    fetchExchanges();
   }, []);
 
   return (
-    <div className="bg-black w-[100%]">
+    <div className="bg-black w-[100%] ">
       {loading ? (
         <Loader />
       ) : (
-        <div className="w-[100%] h-[100vh] bg-black">
+        <div className="w-[78%] mx-auto pb-6 h-[100%] flex flex-col gap-2 border-[0.1px] rounded-2xl border-[#2e2b31] bg-black">
+          <div className="w-[100%] mb-2 col-heading rounded-t-2xl mx-auto h-[3rem] items-center text-white flex justify-center">
+            <p className="w-[40%] mr-[9%] text-center">coin</p>
+            <div className="flex justify-between w-[28%]">
+            <p>Price</p>
+            <p className="hidden sm:flex">Rank</p>
+            </div>
+          </div>
           {exchanges.map((exchange, index) => (
             <Exchange exchange={exchange} key={index} />
           ))}
