@@ -1,12 +1,16 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
+import { RxHamburgerMenu } from "react-icons/rx";
 
 const Navbar = () => {
+  const[options, setOptions] = useState(false);
+  function changeOptions(){
+    
+  }
   return (
     <div className="bg-black w-[100%] py-4">
-      <div className=" text-white flex border-[0.1px] rounded-3xl p-2 border-[#2e2b31] justify-between mx-auto items-center max-w-[78%]  navbar">
-        <div className="mx-4 rounded-full">
-          {/* <NavLink to={"/"} className="h-14"><img className="h-14" src={logo}></img></NavLink> */}
+      <div className=" text-white flex border-[0.1px] rounded-3xl p-2 border-[#2e2b31] justify-between mx-auto items-center max-w-[78%] navbar">
+        <div className="mx-4 rounded-full ">
           <NavLink to={"/"} className="h-14 flex gap-4 justify-center items-center">
             <svg
               height="80%"
@@ -23,13 +27,68 @@ const Navbar = () => {
           </NavLink>
         </div>
 
-        <div className=" text-white hidden h-[4rem] max-w-[10rem] w-[10rem] mr-12 justify-between items-center sm:flex">
+        <div className=" text-white flex sm:hidden justify-center items-center relative">
+        <RxHamburgerMenu 
+        className={options?"text-[2.25rem] rounded-full p-2 bg-[#33333379]" : "text-[2.25rem] rounded-full p-2" }
+        onClick={()=>setOptions((prev=>!prev))} />
+
+          {
+            options?
+            (<div className=" px-[2rem] py-[1rem] z-10 rounded-xl text-xs justify-between items-center absolute top-[250%] right-[0] bg-black border-[0.1px] border-[#2e2b31] navbar w-max h-max">
+            <NavLink
+                to="/"
+                className="rounded-lg p-5 flex justify-center items-center w-full h-full"
+              >
+                Home
+              </NavLink>
+  
+              <a
+                href="#about"
+                className="rounded-lg p-5 flex justify-center items-center w-full h-full"
+              >
+                About
+              </a>
+  
+              <a
+                href="#join"
+                className="rounded-lg p-5 flex justify-center items-center w-full h-full"
+              >
+                Join
+              </a>
+  
+              <NavLink
+                to="/coins"
+                className="rounded-lg p-5 flex justify-center items-center w-full h-full"
+              >
+                Coin
+              </NavLink>
+            </div>) :
+            null
+          }
+            
+        </div>
+
+        <div className=" text-white hidden h-[4rem] text-xs md:text-sm lg:text-base justify-between items-center sm:flex">
             <NavLink
               to="/"
               className="rounded-lg p-5 flex justify-center items-center w-full h-full"
             >
               Home
             </NavLink>
+
+            <a
+              href="#about"
+              className="rounded-lg p-5 flex justify-center items-center w-full h-full"
+            >
+              About
+            </a>
+
+            <a
+              href="#join"
+              className="rounded-lg p-5 flex justify-center items-center w-full h-full"
+            >
+              Join
+            </a>
 
             <NavLink
               to="/coins"

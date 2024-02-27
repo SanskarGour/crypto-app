@@ -4,12 +4,10 @@
 }
 
 .gradient-text1 {
-  /* font-size: 4rem; */
   background: -webkit-linear-gradient(#eee, #333);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-transform: uppercase;
-  /* line-height: 4rem; */
 }
 
 img.vert-move {
@@ -49,7 +47,7 @@ img.vert-move {
 }
 
 .gradient-text2 {
-  background: -webkit-linear-gradient(#eee, #333);
+  background: -webkit-linear-gradient(#eee, #a600fa);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

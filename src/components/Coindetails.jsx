@@ -52,18 +52,18 @@ const CoinDetails = () => {
       {loading ? (
         <Loader className='max-w-full max-h-[5rem]' />
       ) : (
-        <div className="bg-black text-white w-[78%] mx-auto px-2 pb-32 flex flex-wrap pt-[1.5rem]">
-          <div className="min-w-[15rem] max-w-[100%] md:max-w-[25%]">
+        <div className="bg-black gap-2 text-white w-[78%] mx-auto px-2 pb-32 flex flex-wrap pt-[1.5rem]">
+          <div className="min-w-[15rem] max-w-[100%] lg:max-w-[31%]">
 
             {/* detail */}
             <div className="flex flex-col justify-center items-center w-[100%]">
               {/* last updated */}
-              <div className="text-sm">Last Updated On {coinDetails?.last_updated}</div>
+              <div className="text-xs md:text-sm ">Last Updated On {coinDetails?.last_updated}</div>
               
               {/* image */}
               <div className="py-10 flex justify-center w-[50px] sm:w-[70px] md:w-[100px] lg:w-[150px] "><img width='100%' src={coinDetails?.image.large} /></div>
 
-              <div className="mx-auto max-w-[100%] text-xl  text-center font-semibold">
+              <div className="mx-auto max-w-[100%]  text-center font-semibold text-xs sm:text-sm md:text-base lg:text-lg">
                 {/* name */}
                 <div>{coinDetails.name}</div>
 
@@ -75,25 +75,25 @@ const CoinDetails = () => {
                 </div>
 
                 {/* bullish/bearish */}
-                <div className="flex justify-center pt-[0.5rem]" >
+                <div className="flex justify-center pt-[0.5rem] " >
                  <div >{(changePercent > 0) ? <BiSolidUpArrow className="text-green-600 text-base " /> : <BiSolidDownArrow className="text-base text-red-600"/>}</div>
                  <div>{coinDetails?.market_data.price_change_percentage_24h}%</div>
                 </div>
               </div>
 
               {/* rank */}
-              <div className="flex justify-center font-bold py-[2rem] text-3xl">
+              <div className="flex justify-center font-bold py-[2rem] text-lg sm:text-xl md:text-2xl lg:text-3xl">
                 <div><IoPulseOutline className="text-yellow-400" /></div>
                 <div>#{coinDetails?.market_cap_rank}</div>
               </div>
             </div>
 
             {/* description */}
-            <div className="text-gray-300">{desc}</div>
+            <div className="text-gray-300 text-xs sm:text-sm md:text-base">{desc}</div>
           </div>
 
           {/* chart and button */}
-          <div className="flex-col justify-start max-w-[68%] min-w-[68%] min-h-max items-start">
+          <div className="flex-col justify-start max-w-[100%] md:max-w-[68%] min-w-[68%] min-h-max items-start text-xs sm:text-sm md:text-base">
           <CoinChart />
           <div className="flex max-w-[20rem] justify-between p-4">
             <button onClick={()=>setDays(1)} className='border-slate-800 border-[0.5px] py-1 px-2 rounded-lg'>24 hours</button>

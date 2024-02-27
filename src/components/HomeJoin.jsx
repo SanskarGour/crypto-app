@@ -5,7 +5,7 @@ import telegram from "../assests/telegram.png";
 function HomeJoin() {
 
   return (
-    <div className="text-white mb-6">
+    <div className="text-white mb-6" id="join">
       <div className=" rounded-2xl border-[0.1px] border-[#2e2b31] flex flex-col justify-center items-center py-5 sm:pt-10 lg:pt-20 md:pt-14 w-[78%] mx-auto space-y-10 relative leading-[2rem] sm:leading-[2rem] md:leading-[3rem] lg:leading-[4rem] ">
         <h1 className="text-center text-[2rem] flex md:text-[3rem] lg:text-[4rem] gradient-text1 justify-center items-center gap-5">
           <img
@@ -27,11 +27,11 @@ function HomeJoin() {
         DISCORD
         </h1>
 
-        <p>Invest and manage all your crypto at one place.</p>
+        <p className="text-xs md:text-sm lg:text-base">Invest and manage all your crypto at one place.</p>
 
         <a 
         href="https://discord.com/" target="_blank"
-        className="px-4 flex justify-center items-center hover:cursor-pointer h-[3rem] rounded-full bg-purple-600">Join Discord</a>
+        className="px-4 flex justify-center items-center hover:cursor-pointer h-[3rem] rounded-full bg-purple-600 text-xs sm:text-sm md:text-base lg:text-lg">Join Discord</a>
 
       </div>
     </div>
