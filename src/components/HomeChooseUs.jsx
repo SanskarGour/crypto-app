@@ -8,7 +8,7 @@ import { IoLayersOutline } from "react-icons/io5";
 import hand from "../assests/hand.png";
 function HomeChooseUs() {
   return (
-    <div className="text-white my-6 ">
+    <div className="text-white my-6 "  id="about">
       <div className="rounded-2xl px-4 border-[0.1px] border-[#2e2b31] flex flex-col justify-center items-center w-[78%] mb-16  mx-auto relative leading-[2rem] shadow1">
         <div className=" text-[1rem] flex my-2 md:my-4 md:text-[1.5rem] lg:text-[2rem] font-semibold gradient-text2">
           WHY CHOOSE US!

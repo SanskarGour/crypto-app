@@ -19,7 +19,7 @@ function HomePageContent() {
   }, []);
 
   return (
-    <div className="text-white mb-6" id="about">
+    <div className="text-white mb-6">
       <div className=" rounded-2xl border-[0.1px] border-[#2e2b31] flex flex-col justify-center items-center pt-5 sm:pt-10 lg:pt-20 md:pt-14 w-[78%] mx-auto space-y-10 relative leading-[2rem] sm:leading-[2rem] md:leading-[3rem] lg:leading-[4rem] shadow1 mt-4">
         <h1 className="text-center text-[2rem] flex md:text-[3rem] lg:text-[4rem] gradient-text1 justify-center items-center gap-5">
           <img
