@@ -4,13 +4,12 @@ import HomePageContent from "./HomePageContent";
 import HomeChooseUs from "./HomeChooseUs";
 import Footer from "./Footer";
 import HomeJoin from "./HomeJoin";
-import { Outlet } from "react-router-dom";
 
 const HomePage = () => {
   return (
     <div className="py-6">
-      {/* <HomePageContent /> */}
-      {/* <Exchanges /> */}
+      <HomePageContent />
+      <Exchanges />
       <HomeChooseUs />
       <HomeJoin />
       <Footer />
