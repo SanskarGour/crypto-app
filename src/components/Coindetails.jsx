@@ -48,20 +48,20 @@ const CoinDetails = () => {
   }, []);
 
   return (
-    <div className="bg-black pt-2 h-[calc(100vh-4rem)] w-full flex">
+    <div className="bg-black pt-2 h-full w-full flex">
       {loading ? (
-        <Loader className='max-w-full max-h-[10rem]' />
+        <Loader className='max-w-full max-h-[5rem]' />
       ) : (
-        <div className="bg-black text-white max-w-[1100px] mx-auto flex pt-[1.5rem]">
-          <div className="min-w-[32%] max-w-[32%]">
+        <div className="bg-black text-white w-[78%] mx-auto px-2 pb-32 flex flex-wrap pt-[1.5rem]">
+          <div className="min-w-[15rem] max-w-[100%] md:max-w-[25%]">
 
             {/* detail */}
-            <div>
+            <div className="flex flex-col justify-center items-center w-[100%]">
               {/* last updated */}
               <div className="text-sm">Last Updated On {coinDetails?.last_updated}</div>
               
               {/* image */}
-              <div className="py-10 flex justify-center"><img width='50%' src={coinDetails?.image.large} /></div>
+              <div className="py-10 flex justify-center w-[50px] sm:w-[70px] md:w-[100px] lg:w-[150px] "><img width='100%' src={coinDetails?.image.large} /></div>
 
               <div className="mx-auto max-w-[100%] text-xl  text-center font-semibold">
                 {/* name */}
@@ -89,11 +89,11 @@ const CoinDetails = () => {
             </div>
 
             {/* description */}
-            <div className="text-gray-300">{desc}.</div>
+            <div className="text-gray-300">{desc}</div>
           </div>
 
           {/* chart and button */}
-          <div className="flex-col justify-start w-full h-full items-start">
+          <div className="flex-col justify-start max-w-[68%] min-w-[68%] min-h-max items-start">
           <CoinChart />
           <div className="flex max-w-[20rem] justify-between p-4">
             <button onClick={()=>setDays(1)} className='border-slate-800 border-[0.5px] py-1 px-2 rounded-lg'>24 hours</button>

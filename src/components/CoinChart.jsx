@@ -67,11 +67,11 @@ const CoinChart = () => {
   }
 
   return (
-    <div>
+    <div className="w-full relative ">
       {
-        chartData.length === 0 ? ( <Loader  />) : 
+        chartData.length === 0 ? ("Loading ...") : 
         (
-          <div className="min-w-[800px]">
+          <div className="w-full relative text-xs sm:text-sm lg:text-base">
             <Line data={myData} options={{
               elements:{
                 point:{
