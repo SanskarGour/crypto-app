@@ -48,11 +48,11 @@ const CoinDetails = () => {
   }, []);
 
   return (
-    <div className="bg-black pt-2 h-full w-full flex mb-32">
+    <div className="bg-black pt-2 h-full w-full flex pb-32 ">
       {loading ? (
         <Loader className='max-w-full max-h-[5rem]' />
       ) : (
-        <div className="bg-black gap-2 text-white w-[78%] mx-auto px-2 pb-32 flex flex-wrap pt-[1.5rem]">
+        <div className="bg-black gap-2 text-white w-[78%] mx-auto px-2 pb-32 flex flex-wrap pt-[1.5rem] shadow1 border-[0.1px] border-[#2e2b31] rounded-2xl">
           <div className="min-w-[15rem] max-w-[100%] lg:max-w-[31%]">
 
             {/* detail */}

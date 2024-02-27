@@ -15,7 +15,7 @@ const Exchanges = () => {
       {loading ? (
         <Loader />
       ) : (
-        <div className="w-[78%] mx-auto pb-6 h-[100%] flex flex-col gap-2 border-[0.1px] rounded-2xl border-[#2e2b31] bg-black">
+        <div className="w-[78%] mx-auto pb-6 h-[100%] flex flex-col gap-2 border-[0.1px] rounded-2xl border-[#2e2b31] bg-black shadow1 my-16">
           <div className="w-[100%] mb-2 col-heading rounded-t-2xl mx-auto h-[3rem] items-center text-white flex justify-center">
             <p className="w-[40%] mr-[9%] text-center">coin</p>
             <div className="flex justify-between w-[28%]">

@@ -8,8 +8,8 @@ const Navbar = () => {
     
   }
   return (
-    <div className="bg-black w-[100%] py-4">
-      <div className=" text-white flex border-[0.1px] rounded-3xl p-2 border-[#2e2b31] justify-between mx-auto items-center max-w-[78%] navbar">
+    <div className="bg-black w-[100%] py-4 ">
+      <div className=" text-white flex border-[0.1px] rounded-3xl p-2 border-[#2e2b31] justify-between mx-auto items-center max-w-[78%] navbar shadow1">
         <div className="mx-4 rounded-full ">
           <NavLink to={"/"} className="h-14 flex gap-4 justify-center items-center">
             <svg
